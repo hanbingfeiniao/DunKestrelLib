@@ -82,7 +82,8 @@ func _unhandled_input(_event):
 			d.enter.connect(set_addable_dot.bind(false))
 			d.exit.connect(set_addable_dot.bind(true))
 	if Input.is_action_just_pressed("ui_accept"):
-		test(int(line_edit_2.text))
+		#test(int(line_edit_2.text))
+		example.return_something("123123")
 
 func new_test(id):
 	var dic = graph.dijkstraAlgorithm(id)

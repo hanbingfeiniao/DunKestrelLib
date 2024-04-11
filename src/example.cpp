@@ -399,7 +399,9 @@ String Example::image_const_ref_func(const Ref<Image> &p_image) {
 }
 
 String Example::return_something(const String &base) {
-	return base + String("42");
+	int a = external_function();
+	UtilityFunctions::print(a);
+	return base + String("b");
 }
 
 Viewport *Example::return_something_const() const {

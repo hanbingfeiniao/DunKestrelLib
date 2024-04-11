@@ -12,6 +12,7 @@ target_sources( ${PROJECT_NAME}
         example.cpp
         register_types.h
         register_types.cpp
+        customlib.h
 
 )
 

@@ -22,6 +22,7 @@
 
 #include <godot_cpp/core/binder_common.hpp>
 #include "Graph.h"
+#include "customlib.h"
 
 using namespace godot;
 

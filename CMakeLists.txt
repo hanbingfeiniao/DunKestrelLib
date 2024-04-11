@@ -136,3 +136,22 @@ target_link_libraries( ${PROJECT_NAME}
     PRIVATE
         godot-cpp
 )
+# 指定包含 DLL 的目录
+set(DLL_DIRECTORY "dlls")
+
+# 将 DLL 复制到输出目录
+file(COPY ${DLL_DIRECTORY}/MyProjDll.dll
+     DESTINATION ${CMAKE_BINARY_DIR})
+file(COPY ${DLL_DIRECTORY}/MyProjDll.lib
+     DESTINATION ${CMAKE_BINARY_DIR})
+
+# 添加 DLL 到项目中
+add_library(DLL1 SHARED IMPORTED)
+set_target_properties(DLL1 PROPERTIES
+    IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/MyProjDll.dll
+    IMPORTED_IMPLIB ${CMAKE_BINARY_DIR}/MyProjDll.lib
+)
+# 指定 DLL 的位置
+# 请将 path/to/external_lib 替换为包含 external_lib.dll 的实际路径
+
+target_link_libraries(${PROJECT_NAME} PRIVATE DLL1)
