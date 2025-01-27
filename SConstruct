@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-libname = "DunKestrelLib"
+libname = "GodotGPT"
 
 env = SConscript("godot-cpp/SConstruct")
 

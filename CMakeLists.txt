@@ -27,7 +27,7 @@ if ( APPLE )
 endif()
 
 # Main project information
-project( DunKestrelLib
+project( GodotGPT
     LANGUAGES
         CXX
     VERSION
@@ -63,7 +63,7 @@ set( BUILD_OUTPUT_DIR "${PROJECT_BINARY_DIR}/bin/" )
 
 set_target_properties( ${PROJECT_NAME}
     PROPERTIES
-        OUTPUT_NAME "DunKestrelLib.windows.template_debug.x86_64"
+        OUTPUT_NAME "GodotGPT.windows.template_debug.x86_64"
         CXX_VISIBILITY_PRESET hidden
         VISIBILITY_INLINES_HIDDEN true
         RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/demo/${LIB_DIR}"
